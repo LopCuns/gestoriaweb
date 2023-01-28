@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,55 +8,59 @@
     <title>tugestoríaweb</title>
 </head>
 <body>
-    <header>
-        <div>
-            <h1>tugestoríaweb</h1>
-            <h2>asesoría profesional</h2>
-            <h2>ga</h2>
+    <g-rounded msize="15" tsize="7.5" mcolor="#aaf" tcolor="#fff" wx="-5" wy="-5"></g-rounded>
+    <header class="pheader" data-obs>
+        <div class="pheader__txt">
+            <h1 class="pheader__txt__title">tugestoríaweb</h1>
+            <h2 class="pheader__txt__subtitle">asesoría profesional</h2>
+            <h2 class="pheader__txt__sym">ga</h2>
         </div>
-        <img src="public/assets/gestoria_logo.jpg" alt="gestoría logo">
-        <nav>
-            <ul>
-                <li>Servicios</li>
-                <li>Contacto</li>
-                <li>Ubicación</li>
+        <div class="pheader__imageWrapper">
+            <g-rounded msize="7" tsize="3.5" mcolor="#aaf" tcolor="#fff" wx="14" wy="-4"></g-rounded>
+            <img src="public/assets/gestoria_logo.jpg" alt="gestoría logo" class="pheader__image">
+        </div>
+        <nav class="menu">
+            <ul class="menu__ul">
+                <li class="menu__ul__li"><a href="#servicios" class="menu__ul__li__a">servicios</a></li>
+                <li class="menu__ul__li"><a href="#contacto" class="menu__ul__li__a">contacto</a></li>
+                <li class="menu__ul__li"><a href="#ubicacion" class="menu__ul__li__a">ubicación</a></li>
             </ul>
         </nav>
-        <g-rounded msize="4" tsize="2" mcolor="blue" tcolor="white"></g-rounded>
     </header>
-    <main>
-        <section>
-            <h3>Servicios</h3>
-            <article>
-                <img src="public/assets/balance.png" alt="balanza">
-                <h4>asesoría judicial</h4>
-                <p>juicios y conflictos legales</p>
+    <main class="main">
+        <section class="main__sec services">
+            <h3 class="main__sec__title">Servicios</h3>
+            <article class="services__card" data-obs>
+                <img src="public/assets/balance.png" alt="balanza" class="services__card__image">
+                <h4 class="services__card__what">asesoría judicial</h4>
+                <p class="services__card__desc">juicios y conflictos legales</p>
             </article>
-            <article>
-                <img src="public/assets/briefcase.png" alt="maletín">
-                <h4>asesoría empresarial</h4>
-                <p>negocios y emprendimiento</p>
+            <article class="services__card" data-obs>
+                <img src="public/assets/briefcase.png" alt="maletín" class="services__card__image">
+                <h4 class="services__card__what">asesoría empresarial</h4>
+                <p class="services__card__desc">negocios y emprendimiento</p>
             </article>
-            <article>
-                <img src="public/assets/dollar.png" alt="monedas">
-                <h4>asesoría económica</h4>
-                <p>inversión y ahorro</p>
+            <article class="services__card" data-obs>
+                <img src="public/assets/dollar.png" alt="monedas" class="services__card__image">
+                <h4 class="services__card__what">asesoría económica</h4>
+                <p class="services__card__desc">inversión y ahorro</p>
             </article>
         </section>
-        <hr>
-        <section>
-            <img src="public/assets/call.png" alt="teléfono fijo">
-            <div>
-                <p>teléfono : 123 123 123</p>
-                <p>correo electrónico : tugestoría@tugestoría.com</p>
+        <hr class="secBreak">
+        <section class="main__sec contact" data-obs>
+            <h3 class="main__sec__title">Contacto</h3>
+            <img src="public/assets/call.png" alt="teléfono fijo" class="contact__image">
+            <div class="contact__txt">
+                <p class="contact__txt__phone">teléfono : 123 123 123</p>
+                <p class="contact__txt__email">correo electrónico : tugestoría@tugestoría.com</p>
             </div>
         </section>
-        <hr>
-        <section>
-            <img src="public/assets/gestoria_mapa.png" alt="mapa de la gestoría">
-            <div>
-                <img src="public/assets/location-pin.png" alt="símbolo ubicación">
-                <p> calle xx xx avenida xx xx Barcelona</p>
+        <hr class="secBreak">
+        <section class="main__sec location" data-obs>
+            <img src="public/assets/gestoria_mapa.png" alt="mapa de la gestoría" class="location__image">
+            <div class="location__caption">
+                <img src="public/assets/location-pin.png" alt="símbolo ubicación" class="location__caption__icon">
+                <p class="location__caption__direction"> calle xx xx avenida xx xx Barcelona</p>
             </div>
         </section>
     </main>

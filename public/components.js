@@ -5,8 +5,11 @@ class rounded extends HTMLElement{
         this.sheet = ''
     }
     changeSheet(){
-        this.sheet = `.mainCircle{
+        this.sheet = `
+        .mainCircle{
             position: absolute;
+            top: ${this.getAttribute('wy')}rem;
+            left: ${this.getAttribute('wx')}rem;
             display: grid;
             place-items: center;
             width : ${this.getAttribute('msize')}rem;
