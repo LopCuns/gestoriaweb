@@ -9,13 +9,13 @@
 </head>
 <body>
     <g-rounded msize="15" tsize="7.5" mcolor="#aaf" tcolor="#fff" wx="-5" wy="-5" sh="left"></g-rounded>
-    <header class="pheader" data-obs>
-        <div class="pheader__txt">
+    <header class="pheader" >
+        <div class="pheader__txt" data-obs>
             <h1 class="pheader__txt__title">tugestoríaweb</h1>
             <h2 class="pheader__txt__subtitle">asesoría profesional</h2>
             <h2 class="pheader__txt__sym">ga</h2>
         </div>
-        <div class="pheader__imageWrapper">
+        <div class="pheader__imageWrapper" data-obs>
             <g-rounded msize="7" tsize="3.5" mcolor="#aaf" tcolor="#fff" wx="14" wy="-4" sh="left"></g-rounded>
             <img src="public/assets/gestoria_logo.jpg" alt="gestoría logo" class="pheader__image">
         </div>
@@ -28,6 +28,7 @@
         </nav>
     </header>
     <main class="main">
+        <a id="servicios"></a>
         <section class="main__sec services">
             <h3 class="main__sec__title">Servicios</h3>
             <article class="services__card" data-obs>
@@ -48,7 +49,8 @@
         </section>
         <hr class="secBreak">
         <section class="main__sec contact" data-obs>
-            <g-rounded msize="10" tsize="5" mcolor="#aaf" tcolor="#fff" wx="-5" wy="0" sh="right"></g-rounded>
+            <a id="contacto"></a>
+            <g-rounded msize="10" tsize="5" mcolor="#aaf" tcolor="#fff" wx="-5" wy="0" sh="right" back></g-rounded>
             <h3 class="main__sec__title">Contacto</h3>
             <img src="public/assets/call.png" alt="teléfono fijo" class="contact__image icon">
             <div class="contact__txt">
@@ -58,11 +60,13 @@
         </section>
         <hr class="secBreak">
         <section class="main__sec location" data-obs>
+            <a id="ubicacion"></a>
+            <g-rounded msize="15" tsize="7.5" mcolor="#aaf" tcolor="#fff" sh="left" wx="-10" wy="0" back></g-rounded>
             <h3 class="main__sec__title">Ubicación</h3>
             <img src="public/assets/gestoria_mapa.png" alt="mapa de la gestoría" class="location__image">
             <div class="location__caption">
                 <img src="public/assets/location-pin.png" alt="símbolo ubicación" class="location__caption__icon">
-                <p class="location__caption__direction"> calle xx xx avenida xx xx Barcelona</p>
+                <p class="location__caption__direction"> Calle xx xx Avenida xx xx Barcelona</p>
             </div>
         </section>
     </main>

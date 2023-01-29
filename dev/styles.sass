@@ -12,6 +12,7 @@ $mainRadius: 20px
 html,body
     position: relative
     overflow-x: hidden
+    scroll-behavior: smooth
 body
     width: 100vw
     min-height: 100vh
@@ -37,6 +38,13 @@ a
 //UTILITY CLASSES
 .icon
     filter: brightness(0) saturate(100%) invert(71%) sepia(10%) saturate(4519%) hue-rotate(199deg) brightness(104%) contrast(101%)
+[data-obs]
+    opacity: 0
+    transform: translateY(-1rem)
+    transition: transform 1s, opacity 1s
+.show
+    opacity: 1
+    transform: translateY(0)
 //MAIN STYLES FOR MOBILE
 .pheader
     @include mx.flex(row,wrap,center,center)
@@ -125,7 +133,19 @@ a
             transform: capitalize
             align: center
         font-size: 1.2em
-  
+
+.location
+    $width: min(100%,40rem)
+    @include mx.flex(column,wrap,center,center)
+    &__image
+        width: $width
+    &__caption
+        @include mx.flex(row,wrap,space-around,center)
+        width: $width
+        background-color: $lightBlue
+        font-size: 1.1em
+        &__icon
+            width: 2rem
 
 //MAIN DESKTOP STYLES
 

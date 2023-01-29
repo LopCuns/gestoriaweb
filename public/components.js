@@ -15,6 +15,7 @@ class rounded extends HTMLElement{
             width : ${this.getAttribute('msize')}rem;
             height :${this.getAttribute('msize')}rem;
             border-radius : 50%;background-color: ${this.getAttribute('mcolor')};
+            z-index : ${this.hasAttribute('back') ? -1 : 0}
         }
         .tinyCircle{
             width : ${this.getAttribute('tsize')}rem;
@@ -37,12 +38,10 @@ class rounded extends HTMLElement{
         styles.setAttribute('type','text/css')
         styles.textContent = this.sheet;
 
-        console.log(styles)
         mainCircle.appendChild(tinyCircle)
         fr.appendChild(mainCircle)
         fr.appendChild(styles)
         this.shadowRoot.appendChild(fr)
-        console.log(this.sheet)
     }
     attributeChangedCallback(){
         this.changeSheet()
