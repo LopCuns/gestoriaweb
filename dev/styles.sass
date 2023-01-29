@@ -1,10 +1,13 @@
 @use "mixins" as mx
 //VARIABLES
 $mainBlue : #aaf
+$lightBlue : #ddf
 $highlightedBlue : #44f
 $pd : 1.5rem
+$mainRadius: 20px
 //CSS RESET
-
+*,::after,::before
+    box-sizing: border-box
 body
     margin: 0
 
@@ -25,6 +28,9 @@ li
 a
     color: #000
     text-decoration: none
+//UTILITY CLASSES
+.icon
+    filter: brightness(0) saturate(100%) invert(71%) sepia(10%) saturate(4519%) hue-rotate(199deg) brightness(104%) contrast(101%)
 //MAIN STYLES FOR MOBILE
 .pheader
     @include mx.flex(row,wrap,center,center)
@@ -47,7 +53,7 @@ a
     &__image
         width: 100%
         height: 100%
-        border-radius: 20px
+        border-radius: $mainRadius
         box-shadow: 20px 20px 0 $mainBlue
         object-fit: cover
 
@@ -68,6 +74,40 @@ a
                 &:hover
                     color: $highlightedBlue
 
+.main
+    width: 100%
+    padding: 1rem
+    &__sec
+        margin: 2rem 0 5rem
+        &__title
+            width: 100%
+            font-size: 2em
+            text-align: center
+.secBreak
+    background-color: $mainBlue
+    height: 4px
+    border: none
+.services
+    @include mx.flex(row,wrap,space-evenly,center)
+    gap: 1rem
+    &__card
+        @include mx.flex(column,wrap,center,center)
+        width: 15rem
+        padding: 2rem 0
+        border-radius: calc($mainRadius / 2)
+        background-color: $mainBlue
+        box-shadow: 20px 20px 0px $lightBlue
+        &__image
+            width: 5rem
+            height: 5rem
+        &__what
+            width: 100%
+            padding: 1rem
+            text:
+                transform: capitalize
+                align: center
+            background-color: $lightBlue
+            
 
 //MAIN DESKTOP STYLES
 
@@ -85,4 +125,5 @@ a
             justify-content: flex-start
             gap: 2rem
             padding-left: 5rem
-            
+    
+
