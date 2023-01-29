@@ -8,7 +8,13 @@ $mainRadius: 20px
 //CSS RESET
 *,::after,::before
     box-sizing: border-box
+
+html,body
+    position: relative
+    overflow-x: hidden
 body
+    width: 100vw
+    min-height: 100vh
     margin: 0
 
 img
@@ -89,7 +95,7 @@ a
     border: none
 .services
     @include mx.flex(row,wrap,space-evenly,center)
-    gap: 1rem
+    gap: 3rem
     &__card
         @include mx.flex(column,wrap,center,center)
         width: 15rem
@@ -107,7 +113,19 @@ a
                 transform: capitalize
                 align: center
             background-color: $lightBlue
-            
+    
+.contact
+    @include mx.flex(row,wrap,space-evenly,center)
+    &__image
+        width: 10rem
+    &__txt
+        @include mx.flex(column,wrap,center,center)
+        margin-top: 2rem
+        text:
+            transform: capitalize
+            align: center
+        font-size: 1.2em
+  
 
 //MAIN DESKTOP STYLES
 
@@ -125,5 +143,9 @@ a
             justify-content: flex-start
             gap: 2rem
             padding-left: 5rem
+    
+    .contact__txt
+        align-items: flex-start
+        text-align: start
     
 

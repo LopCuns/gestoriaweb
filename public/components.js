@@ -9,7 +9,7 @@ class rounded extends HTMLElement{
         .mainCircle{
             position: absolute;
             top: ${this.getAttribute('wy')}rem;
-            left: ${this.getAttribute('wx')}rem;
+            ${this.getAttribute('sh')}: ${this.getAttribute('wx')}rem;
             display: grid;
             place-items: center;
             width : ${this.getAttribute('msize')}rem;
